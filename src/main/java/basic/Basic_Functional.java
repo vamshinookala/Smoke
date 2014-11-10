@@ -43,7 +43,7 @@ public class Basic_Functional {
 		public void loadProperties(String propertiesfilename) throws FileNotFoundException, IOException
 		{
 			prop=new Properties();
-			prop.load(new FileInputStream("C:\\New folder\\vamshi workspace\\Smoketest\\src\\main\\resources\\" + propertiesfilename+".properties"));
+			prop.load(new FileInputStream("src\\main\\resources\\" + propertiesfilename+".properties"));
 		}
 		
 		public String getProperties(String locator)
@@ -88,7 +88,7 @@ public class Basic_Functional {
 		}
 		public void LoadExcel(String ExcelName) throws InvalidFormatException, FileNotFoundException, IOException
 		{
-			workbook= WorkbookFactory.create(new FileInputStream("C:\\New folder\\vamshi workspace\\Smoketest\\src\\test\\resources\\" + ExcelName +".xls") );
+			workbook= WorkbookFactory.create(new FileInputStream("src/test/resources/" + ExcelName +".xls") );
 			sheet = workbook.getSheetAt(0);
 		}
 		
