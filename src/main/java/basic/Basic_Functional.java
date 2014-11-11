@@ -52,7 +52,7 @@ public class Basic_Functional {
 			
 		}
 		
-		public void textBox(String locator, String Testdata){
+		public void textBox(WebDriver driver, String locator, String Testdata){
 			boolean find=true;
 			if(locator.startsWith("//")){
 				driver.findElement(By.xpath(locator)).sendKeys(Testdata);
@@ -69,7 +69,7 @@ public class Basic_Functional {
 		}
 		
 		
-		public void button(String locator){
+		public void button(WebDriver driver, String locator){
 			boolean find=true;
 			if(locator.startsWith("//")){
 				driver.findElement(By.xpath(locator)).click();
@@ -100,7 +100,7 @@ public class Basic_Functional {
 			return value;
 		}
 		
-		public void screenShot(String nameofscreenshot) throws IOException
+		public void screenShot(WebDriver driver, String nameofscreenshot) throws IOException
 		{
 			//System.out.println("vamshi");
 			 File scrnsht =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);

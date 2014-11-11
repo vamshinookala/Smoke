@@ -19,12 +19,14 @@ public class TestSuite {
 public void Login() throws FileNotFoundException, InvalidFormatException, IOException
 {
 	LoginTest log=new LoginTest();
-	log.Login();
+	log.Login(driver);
 }
-/*public void EditDataset()
+@Test
+public void EditDataset() throws FileNotFoundException, IOException, InterruptedException
 {
+	Thread.sleep(5000);
 	EditDataSets edit=new EditDataSets();
 	edit.EditDataSets_func(driver);
-}*/
+}
 
 }

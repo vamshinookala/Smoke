@@ -1,5 +1,8 @@
 package basicTest;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
@@ -12,8 +15,9 @@ public class EditDataSets {
 	Dropdown drop=new Dropdown();
 	Basic_Functional basic =new Basic_Functional();
 	@Test
-	public void EditDataSets_func(WebDriver driver)
+	public void EditDataSets_func(WebDriver driver) throws FileNotFoundException, IOException
 	{
-		drop.dropdown(driver, "Setup", "abc");
+		basic.loadProperties("Dropdown");
+		drop.dropdown(driver, basic.getProperties("Setup"), "abc");
 	}
 }
