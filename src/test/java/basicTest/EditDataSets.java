@@ -17,7 +17,7 @@ public class EditDataSets {
 	@Test
 	public void EditDataSets_func(WebDriver driver) throws FileNotFoundException, IOException
 	{
-		basic.loadProperties("Dropdown");
+		basic.loadProperties("Datasets");
 		drop.dropdown(driver, basic.getProperties("Setup"), "Datasets");
 	}
 }
