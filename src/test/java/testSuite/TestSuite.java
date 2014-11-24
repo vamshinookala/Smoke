@@ -8,7 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import basic.Basic_Functional;
-import basicTest.EditDataSets;
+import basicTest.CreateDataSets;
+
 import basicTest.LoginTest;
 
 public class TestSuite {
@@ -25,8 +26,8 @@ public void Login() throws FileNotFoundException, InvalidFormatException, IOExce
 public void EditDataset() throws FileNotFoundException, IOException, InterruptedException
 {
 	Thread.sleep(5000);
-	EditDataSets edit=new EditDataSets();
-	edit.EditDataSets_func(driver);
+	CreateDataSets edit=new CreateDataSets();
+	edit.CreateDataSets_func(driver);
 }
 
 }
