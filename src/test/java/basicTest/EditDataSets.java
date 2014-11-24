@@ -19,5 +19,7 @@ public class EditDataSets {
 	{
 		basic.loadProperties("Datasets");
 		drop.dropdown(driver, basic.getProperties("Setup"), "Datasets");
+		drop.dropdown(driver, basic.getProperties("Action"), "New DataSet");
+		
 	}
 }
