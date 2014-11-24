@@ -18,6 +18,6 @@ public class EditDataSets {
 	public void EditDataSets_func(WebDriver driver) throws FileNotFoundException, IOException
 	{
 		basic.loadProperties("Dropdown");
-		drop.dropdown(driver, basic.getProperties("Setup"), "abc");
+		drop.dropdown(driver, basic.getProperties("Setup"), "Datasets");
 	}
 }
