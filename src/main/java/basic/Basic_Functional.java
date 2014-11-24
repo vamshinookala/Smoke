@@ -99,7 +99,24 @@ public class Basic_Functional {
 			String value= c1.getStringCellValue();
 			return value;
 		}
-		
+		public void Checkbox(WebDriver driver, String locator)
+		{
+			boolean find=true;
+			if(locator.startsWith("//")){
+				driver.findElement(By.xpath(locator)).click();
+				find=false;
+			}
+			else if (find){
+				try{
+					WebElement webbutton=driver.findElement(By.id(locator));
+					webbutton.click();
+				}
+				catch(Exception e){
+					//driver.findElement(By.id(locator)).click();
+					e.printStackTrace();
+				}
+			}
+		}
 		public void screenShot(WebDriver driver, String nameofscreenshot) throws IOException
 		{
 			//System.out.println("vamshi");
