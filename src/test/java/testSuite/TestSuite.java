@@ -15,13 +15,13 @@ public class TestSuite {
 
 	Basic_Functional basic =new Basic_Functional();
 	WebDriver driver=basic.getURL();
-@Test
+@Test(priority=1)
 public void Login() throws FileNotFoundException, InvalidFormatException, IOException
 {
 	LoginTest log=new LoginTest();
 	log.Login(driver);
 }
-@Test
+@Test(priority=2)
 public void EditDataset() throws FileNotFoundException, IOException, InterruptedException
 {
 	Thread.sleep(5000);
