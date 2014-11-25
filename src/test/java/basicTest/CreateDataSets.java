@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,9 +26,6 @@ public class CreateDataSets {
 		drop.dropdown(driver, basic.getProperties("Setup"), "Datasets");
 		drop.dropdown(driver, basic.getProperties("Action"), "New DataSet");
 		basic.textBox(driver, basic.getProperties("DatasetName"), "Smoke_Dataset");
-		//drop.dropdown(driver, basic.getProperties("DatasetCategory"), "Capital Markets");
-		/*driver.findElement(By.xpath("//*[@id='Content_Content_checkComboBox_I']")).click();
-		driver.findElement(By.xpath("//td[text()= 'Capital Markets']")).click();*/
 		 driver.findElement(By.id("Content_Content_checkComboBox_I")).click();
 		 List<WebElement> cbox=driver.findElements(By.cssSelector("span[id^='Content_Content_checkComboBox_DDD_DatasetCategoryTreeList']"));
 	     cbox.get(0).click();
@@ -36,6 +34,10 @@ public class CreateDataSets {
 	     Thread.sleep(1000);
 	    basic.textBox(driver, basic.getProperties("Field"), "Integer1");
 	    drop.dropdown(driver, basic.getProperties("Datatype"), "Integer (exact numbers)");
+	    basic.button(driver, basic.getProperties("SaveData"));
+	    Thread.sleep(1000);
 	    basic.button(driver, basic.getProperties("Save"));
+	    Alert al=driver.switchTo().alert();
+	    al.accept(); 
 	}
 }
