@@ -23,7 +23,7 @@ public void Login() throws FileNotFoundException, InvalidFormatException, IOExce
 	log.Login(driver);
 }
 @Test(priority=2)
-public void EditDataset() throws FileNotFoundException, IOException, InterruptedException
+public void CreateDataSet() throws FileNotFoundException, IOException, InterruptedException
 {
 	Thread.sleep(5000);
 	CreateDataSets edit=new CreateDataSets();
