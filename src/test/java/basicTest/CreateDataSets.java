@@ -38,7 +38,6 @@ public class CreateDataSets {
 	    Thread.sleep(1000);
 	    basic.button(driver, basic.getProperties("Save"));
 	    Alert al=driver.switchTo().alert();
-	    
 	    al.accept(); 
 	}
 }

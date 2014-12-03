@@ -22,7 +22,7 @@ public class LoginTest {
 	  basic.textBox(driver, basic.getProperties("Login"), basic.getExceldata(1, 0));
 	  basic.textBox(driver, basic.getProperties("pswd"), basic.getExceldata(1, 1));
 	  basic.button(driver, basic.getProperties("loginbutton"));
-	  basic.screenShot(driver,"Loginsuccessful");
+	  //basic.screenShot(driver,"Loginsuccessful");
 	  
 	  
   }
