@@ -11,6 +11,7 @@ public class Dropdown {
 		boolean find=true;
 		if(locator.startsWith("//")){
 			driver.findElement(By.xpath(locator)).click();
+			//Thread.sleep(500);
 			driver.findElement(By.xpath("//*[text()= '"+dropdownvalue +"']")).click();
 			find=false;
 			

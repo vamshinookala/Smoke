@@ -11,6 +11,7 @@ import basic.Basic_Functional;
 import basicTest.CreateDataSets;
 import basicTest.CreateDatasetFromFile;
 import basicTest.LoginTest;
+import basicTest.NewInputForm;
 
 public class TestSuite {
 
@@ -28,7 +29,7 @@ public void CreateDataSet() throws FileNotFoundException, IOException, Interrupt
 	Thread.sleep(5000);
 	CreateDataSets edit=new CreateDataSets();
 	edit.CreateDataSets_func(driver);
-}*/
+}
 @Test(priority=2)
 public void CreateDatasetfromfile() throws FileNotFoundException, IOException, InterruptedException
 {
@@ -36,5 +37,12 @@ public void CreateDatasetfromfile() throws FileNotFoundException, IOException, I
 	CreateDatasetFromFile createfile=new CreateDatasetFromFile();
 	createfile.CreateDataSetsFile(driver);
 }
-
+*/
+@Test(priority=2)
+public void NewDataset() throws FileNotFoundException, IOException, InterruptedException
+{
+	NewInputForm inputform=new NewInputForm();
+	inputform.CreateNewInputForm(driver);
+	
+}
 }
