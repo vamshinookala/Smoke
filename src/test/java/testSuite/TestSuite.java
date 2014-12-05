@@ -12,6 +12,7 @@ import basicTest.CreateDataSets;
 import basicTest.CreateDatasetFromFile;
 import basicTest.LoginTest;
 import basicTest.NewInputForm;
+import basicTest.dataconnectorTest;
 
 public class TestSuite {
 
@@ -38,11 +39,19 @@ public void CreateDatasetfromfile() throws FileNotFoundException, IOException, I
 	createfile.CreateDataSetsFile(driver);
 }
 */
-@Test(priority=2)
+/*@Test(priority=2)
 public void NewDataset() throws FileNotFoundException, IOException, InterruptedException
 {
 	NewInputForm inputform=new NewInputForm();
 	inputform.CreateNewInputForm(driver);
 	
+}*/
+@Test(priority=2)
+public void createdataconnector() throws FileNotFoundException, IOException, InterruptedException
+{
+	dataconnectorTest d=new dataconnectorTest();
+	d.dataconnector_func(driver);
+	
 }
+
 }
