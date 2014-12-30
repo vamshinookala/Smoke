@@ -22,7 +22,7 @@ public class ControlProgramTest {
 	Basic_Functional basic =new Basic_Functional();
 	WebDriver driver=basic.getURL();
 
-		@Test(priority=1)
+		//@Test(priority=1)
 	public void Control() throws IOException, InvalidFormatException, InterruptedException {
 		// TODO Auto-generated method stub
 		
