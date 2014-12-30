@@ -13,9 +13,11 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
+import repackage.EditBuildScript;
 import basic.Basic_Functional;
 import basicTest.CreateDataSets;
 import basicTest.CreateDatasetFromFile;
+import basicTest.Editdatasets;
 import basicTest.LoginTest;
 import basicTest.dataconnectorTest;
 
@@ -70,6 +72,13 @@ public class TestControlProgram {
 						dc.dataconnector_func(driver);
 					}
 					break;
+				case "EDIT DATASET":
+					if(sh.getRow(i).getCell(3).getStringCellValue().equalsIgnoreCase("YES") ||sh.getRow(i).getCell(3).getStringCellValue().equalsIgnoreCase("Y") )
+					{
+						Editdatasets ed= new Editdatasets();
+						ed.editdataset(driver);
+					}
+					break;	
 			}
 		}
 	}
