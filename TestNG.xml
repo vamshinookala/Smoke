@@ -6,7 +6,7 @@
   </listeners>
   <test name="Control">
     <classes>
-      <class name="controlTest.ControlProgramTest"/>
+      <class name="controlTest.TestControlProgram"/>
       
     </classes>
   </test> <!-- Test -->

@@ -17,12 +17,13 @@ import basic.Basic_Functional;
 import basicTest.CreateDataSets;
 import basicTest.CreateDatasetFromFile;
 import basicTest.LoginTest;
+import basicTest.dataconnectorTest;
 
-public class ControlProgramTest {
+public class TestControlProgram {
 	Basic_Functional basic =new Basic_Functional();
 	WebDriver driver=basic.getURL();
 
-		//@Test(priority=1)
+		@Test(priority=1)
 	public void Control() throws IOException, InvalidFormatException, InterruptedException {
 		// TODO Auto-generated method stub
 		
@@ -60,6 +61,13 @@ public class ControlProgramTest {
 					{
 						CreateDatasetFromFile createfile=new CreateDatasetFromFile();
 						createfile.CreateDataSetsFile(driver);
+					}
+					break;
+				case "CREATE DATASETS FROM CONNECTORS":
+					if(sh.getRow(i).getCell(3).getStringCellValue().equalsIgnoreCase("YES") ||sh.getRow(i).getCell(3).getStringCellValue().equalsIgnoreCase("Y") )
+					{
+						dataconnectorTest dc = new dataconnectorTest();
+						dc.dataconnector_func(driver);
 					}
 					break;
 			}

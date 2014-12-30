@@ -19,15 +19,16 @@ public class dataconnectorTest {
 		basic.loadProperties("dataconnector");
 		drop.dropdown(driver, basic.getProperties("Setup"), "Data Connectors");
 		drop.dropdown(driver, basic.getProperties("Action"), "New");
+		Thread.sleep(5000);
 		drop.dropdown(driver, basic.getProperties("Selectdataconnector"), "WindowsAzure");
-		/*Alert al=driver.switchTo().alert();
-	    al.accept(); */
+		basic.button(driver, basic.getProperties("Submit"));
 		basic.textBox(driver, basic.getProperties("Name"), "Smoke_Dataconnector");
 		basic.textBox(driver, basic.getProperties("Description"), "Smoke_Dataconnector1");
 		basic.textBox(driver, basic.getProperties("Enteremailaddress"), "cdizon@argussoftware.com");
 		basic.textBox(driver, basic.getProperties("Enterkey"), "argus2");
 		basic.textBox(driver, basic.getProperties("Entercountrycode"), "CN");
 		basic.textBox(driver, basic.getProperties("Enterindicatorcode"), "CM.MKT.TRNR");
+		basic.button(driver, basic.getProperties("Save"));
 		
 		
 	}
