@@ -15,7 +15,7 @@ import basicTest.NewInputForm;
 
 public class TestSuite {
 
-	/*Basic_Functional basic =new Basic_Functional();
+	Basic_Functional basic =new Basic_Functional();
 	WebDriver driver=basic.getURL();
 @Test(priority=1)
 public void Login() throws FileNotFoundException, InvalidFormatException, IOException
@@ -23,7 +23,7 @@ public void Login() throws FileNotFoundException, InvalidFormatException, IOExce
 	LoginTest log=new LoginTest();
 	log.Login(driver);
 }
-@Test(priority=2)
+/*@Test(priority=2)
 public void CreateDataSet() throws FileNotFoundException, IOException, InterruptedException
 {
 	Thread.sleep(5000);
@@ -37,12 +37,12 @@ public void CreateDatasetfromfile() throws FileNotFoundException, IOException, I
 	CreateDatasetFromFile createfile=new CreateDatasetFromFile();
 	createfile.CreateDataSetsFile(driver);
 }
-
+*/
 @Test(priority=2)
 public void NewDataset() throws FileNotFoundException, IOException, InterruptedException
 {
 	NewInputForm inputform=new NewInputForm();
 	inputform.CreateNewInputForm(driver);
 	
-}*/
+}
 }
