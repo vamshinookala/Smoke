@@ -34,7 +34,7 @@ public class Basic_Functional {
 		{
 			driver=new FirefoxDriver();
 			driver.manage().window().maximize();
-			driver.get("http://172.18.52.96/new");
+			driver.get("http://172.18.52.96/Symphony.ae");
 			return driver;
 		}
 		

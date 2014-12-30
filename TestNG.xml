@@ -4,9 +4,9 @@
       <listener class-name="org.uncommons.reportng.HTMLReporter"/>
       <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
-  <test name="Test">
+  <test name="Control">
     <classes>
-      <class name="testSuite.TestSuite"/>
+      <class name="controlTest.ControlProgramTest"/>
       
     </classes>
   </test> <!-- Test -->

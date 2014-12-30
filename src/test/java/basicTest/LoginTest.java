@@ -12,7 +12,7 @@ import basic.Basic_Functional;
 
 public class LoginTest {
  
-	@Test
+
   public void Login(WebDriver driver) throws FileNotFoundException, IOException, InvalidFormatException {
 	  Basic_Functional basic =new Basic_Functional();
 	  //basic.Basic();

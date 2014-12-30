@@ -7,13 +7,19 @@
   <dependency>
 	<groupId>org.seleniumhq.selenium</groupId>
 	<artifactId>selenium-java</artifactId>
-	<version>2.43.1</version>
+	<version>2.44.0</version>
 </dependency>
   <dependency>
 	<groupId>org.apache.poi</groupId>
 	<artifactId>poi</artifactId>
 	<version>3.11-beta2</version>
 </dependency>
+<dependency>
+	<groupId>commons-logging</groupId>
+	<artifactId>commons-logging</artifactId>
+	<version>1.1.1</version>
+</dependency>
+
   <dependency>
 	<groupId>org.testng</groupId>
 	<artifactId>testng</artifactId>
