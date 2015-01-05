@@ -32,7 +32,7 @@ public class NewInputForm {
 		basic.button(driver, basic.getProperties("Dataset"));
 		basic.button(driver, basic.getProperties("datasetValue"));
 		Thread.sleep(1000);
-		basic.button(driver, basic.getProperties("availableFields"));
+		basic.button(driver, basic.getProperties("availableFields")); 
 		basic.button(driver, basic.getProperties("Selection"));
 		basic.button(driver, basic.getProperties("Next"));
 		basic.button(driver, basic.getProperties("Preview"));
