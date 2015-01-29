@@ -27,7 +27,7 @@ public class CreateDataSets {
 		basic.loadProperties("Datasets");
 		drop.dropdown(driver, basic.getProperties("Setup"), "Datasets");
 		drop.dropdown(driver, basic.getProperties("Action"), "New DataSet");
-		basic.textBox(driver, basic.getProperties("DatasetName"), "s9");
+		basic.textBox(driver, basic.getProperties("DatasetName"), "CreateDataset_Smoke");
 		 driver.findElement(By.id("Content_Content_checkComboBox_I")).click();
 		 List<WebElement> cbox=driver.findElements(By.cssSelector("span[id^='Content_Content_checkComboBox_DDD_DatasetCategoryTreeList']"));
 	     cbox.get(0).click();
@@ -41,32 +41,10 @@ public class CreateDataSets {
 	    basic.button(driver, basic.getProperties("Save"));
 	    Alert al=driver.switchTo().alert();
 	    al.accept();
+	    Thread.sleep(3500);
 	  WebElement w= driver.findElement(By.id("Content_Content_SuccessMessageLabel"));
-	  String cs= w.getAttribute("Class");
-	  String color=w.getAttribute("style");
-	  System.out.println("cs     "+ cs + "          color                 "+ color);
-	  //w.click();
 	  String s= w.getAttribute("innerHTML");
-	  String s1=w.getText();
-	  String s2= w.getAttribute("value");
-	  
-	  JavascriptExecutor executor = (JavascriptExecutor)driver;
-		String s7= (String)executor.executeScript("document.getElementById('Content_Content_SuccessMessageLabel').textContent");
-	  //String s3= w.t
-	  System.out.println("InnerHTML     " +s +           "GetText    "+s1+       " Value    "+s2);
-	  System.out.println("sdkfjcskldjflksjdfkljsad;flj      "+ s7);
-	  
-	  String s8= (String)executor.executeScript("document.getElementById('Content_Content_SuccessMessageLabel').innerText");
-	  System.out.println("TExtText    "+ s8);
-	  
-	  if(driver.findElement(By.id("Content_Content_SuccessMessageLabel")).getText().contains("Dataset has been saved successfully"))
-	  {
-		  System.out.println("Success");
-	  }
-	 /* WebElement w1= driver.findElement(By.id("pane4"));
-	  String s5=w1.getAttribute("innerHTML");
-	  System.out.println("blahahahahahah      "+ s5);*/
-	    //Assert.assertEquals(s, "Dataset has been saved successfully");
-	    //basic.screenShot(driver, "Create_dataset");
+	    Assert.assertEquals(s, "Dataset has been saved successfully");
+	    basic.screenShot(driver, "Create_dataset");
 	}
 }
